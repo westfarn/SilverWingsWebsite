@@ -8,7 +8,7 @@
 <!--
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background: #4E5869;
+	background:#CCC;
 	margin: 0;
 	padding: 0;
 	color: #000;
@@ -62,6 +62,12 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 */
 .content {
 	padding: 10px 0;
+	border-style:solid;
+	border-width:1px;
+	padding: 5px;
+	margin: 5px;
+	box-shadow: 10px 10px 5px #888;
+	
 }
 
 /* ~~ This grouped selector gives the lists in the .content area space ~~ */
@@ -72,7 +78,8 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 /* ~~ The footer ~~ */
 .footer {
 	padding: 10px 0;
-	background: #6F7D94;
+	background: #0a0b76;
+	color: white;
 }
 
 /* ~~ miscellaneous float/clear classes ~~ */
@@ -90,27 +97,46 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	font-size: 1px;
 	line-height: 0px;
 }
+
+div.navBar {
+	background:#0a0b76;
+	height:auto;
+	width:100%;
+	
+	padding:5px;	
+}
 -->
 </style></head>
+
+<script type="text/javascript" src="../Scripts/Common.js"/> </script>
 
 <body>
 
 <div class="container">
-  <div class="header"><a href="#"><img src="" alt="Insert Logo Here" name="Insert_logo" width="20%" height="90" id="Insert_logo" style="background: #8090AB; display:block;" /></a> 
+  <div class="header"><a href="#"><img src="../Pictures/header.png" alt="Insert Logo Here" name="Insert_logo" width="100%" height="200" id="Insert_logo" style="background: #8090AB; display:block;" /></a> 
     <!-- end .header --></div>
+    <!-- nav bar-->
+  <div class="navBar" id="navBarDiv">
+    	<button onclick="GoToAboutUs()"> About Us </button>
+        <button onclick="GoToRunners()"> Runners </button>
+    </div>
+    
   <div class="content">
-    <h1>Instructions</h1>
-    <p>Be aware that the CSS for these layouts is heavily commented. If you do most of your work in Design view, have a peek at the code to get tips on working with the CSS for the liquid layouts. You can remove these comments before you launch your site. To learn more about the techniques used in these CSS Layouts, read this article at Adobe's Developer Center - <a href="http://www.adobe.com/go/adc_css_layouts">http://www.adobe.com/go/adc_css_layouts</a>.</p>
-    <h2>Layout</h2>
-    <p>Since this is a one-column layout, the .content is not floated. </p>
-    <h3>Logo Replacement</h3>
-    <p>An image placeholder was used in this layout in the .header where you'll likely want to place  a logo. It is recommended that you remove the placeholder and replace it with your own linked logo. </p>
-    <p> Be aware that if you use the Property inspector to navigate to your logo image using the SRC field (instead of removing and replacing the placeholder), you should remove the inline background and display properties. These inline styles are only used to make the logo placeholder show up in browsers for demonstration purposes. </p>
-    <p>To remove the inline styles, make sure your CSS Styles panel is set to Current. Select the image, and in the Properties pane of the CSS Styles panel, right click and delete the display and background properties. (Of course, you can always go directly into the code and delete the inline styles from the image or placeholder there.)</p>
+    <p><h1>Silver Wings Fluying Pig Fundraiser</h1>
+    <h4>The John P. Hyde Chapter of Silver Wings located at University of Cincinnati is 
+    supporting the American Cancer Society and Wounded Warrior project by running in the 
+    Flying Pig Marathon and Half-Marathon on May 3rd 2014. </h4></p>
+    <p><h3>How Does It Work</h3>
+    <h4>Go to the Runners page and search through the runners profiles.  When you find a runner
+    that you would like to sponsor, go to their page.  Then click on the Donate button.  You will
+    do all of your transactions through PayPal so it is secure.   </h4>
+    </p>
     <!-- end .content --></div>
-  <div class="footer">
-    <p>Footer</p>
-    <!-- end .footer --></div>
+  <div class="footer" >
+    <p>Interested in more about Silver Wings: [do email here]</p>
+    <p>Website issues email: westfarn@mail.uc.edu</p>
+    
+  </div><!--end of .footer-->
   <!-- end .container --></div>
 </body>
 </html>

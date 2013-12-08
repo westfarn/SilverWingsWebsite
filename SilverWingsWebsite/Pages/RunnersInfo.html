@@ -109,6 +109,13 @@ div.RunnerInfo img {
 	margin: 5px;
 	border: 2px;	
 }
+div.navBar {
+	background:#0a0b76;
+	height:auto;
+	width:100%;
+	
+	padding:5px;	
+}
 -->
 </style>
 <script type="text/javascript" src="../Scripts/RunnerInfoCapabilities.js"/>
@@ -122,6 +129,11 @@ div.RunnerInfo img {
   <div class="header"><a href="#"><img src="" alt="Insert Logo Here" name="Insert_logo" width="20%" height="90" id="Insert_logo" style="background: #8090AB; display:block;" /></a> 
     <!-- end .header --></div>
   <div class="content">
+   <!-- nav bar-->
+    <div class="navBar" id="navBarDiv">
+    	<button onclick="GoToAboutUs()"> About Us </button>
+        <button onclick="GoToRunners()"> Runners </button>
+    </div>
     <h1>Ryan Westfall</h1>
     
     <div class="RunnerInfo" float="right">

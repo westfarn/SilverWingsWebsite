@@ -12,7 +12,7 @@ body {
 	margin: 0;
 	padding: 0;
 	color:#000;
-	box-shadow:5px,5px,#000;
+	
 }
 
 /* ~~ Element/tag selectors ~~ */
@@ -79,12 +79,12 @@ div.header {
 div.runner_information {
 	padding: 5px;
 	background:#CCC;
-	margin: 1px;
+	margin: 3px;
 	border: 1px;
 	display: table;
-	width: 100%;
-	float:right;
-	box-shadow:5px,5px, #000;
+	width: 98%;
+	float:center;
+	box-shadow:2px 2px #888;
 }
 
 div.runner_information span {
@@ -117,14 +117,20 @@ div.img {
 div.div {
 	float:right;	
 }
+div.navBar {
+	background:#0a0b76;
+	height:auto;
+	width:100%;
+	
+	padding:5px;	
+}
 
 </style>
 
 
 
-<script type="text/javascript" src="../Scripts/RunnerCapabilities.js"/>
-
-</script>
+<script type="text/javascript" src="../Scripts/RunnerCapabilities.js"/></script>
+<script type="text/javascript" src="../Scripts/Common.js"/></script>
 </head>
 
 <body>
@@ -133,6 +139,11 @@ div.div {
 <div class="header"><a href="#"><img src="../Pictures/header.png" alt="Insert Logo Here" name="Insert_logo" width="100%" height="200" id="Insert_logo" style="background: #8090AB; display:block;" /></a> 
     <!-- end .header --></div>
   <div class="content">
+   <!-- nav bar-->
+    <div class="navBar" id="navBarDiv">
+    	<button onclick="GoToHome()"> Home </button>
+        <button onclick="GoToAboutUs()"> About Us </button>
+    </div>
     <h1>Meet The Runners</h1>
     <p>&nbsp;</p>
 <div class="runner_information" id="tempRunner" onclick="getMoreInfo()">
@@ -143,8 +154,6 @@ div.div {
     	Figure out why I can't put more then text in here
     </span>
 </div>
-<p>
-</p>
 <div class="runner_information" id="tempRunner" onclick="getMoreInfo()">
 	<span onclick="nextPage()">
     	<img src="../Pictures/sample.jpg" width="100" height="100" />
