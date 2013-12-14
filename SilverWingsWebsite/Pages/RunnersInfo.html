@@ -116,11 +116,26 @@ div.navBar {
 	
 	padding:5px;	
 }
+div.calculator {
+	width:60%;	
+	background-color:#999;
+	box-shadow:2px 2px #888;
+	margin-top: 10px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+div.calcItem {
+		
+}
+div.totalBox {
+	text-align:right;
+		
+}
 -->
 </style>
-<script type="text/javascript" src="../Scripts/RunnerInfoCapabilities.js"/>
-
-</script>
+<script type="text/javascript" src="../Scripts/RunnerInfoCapabilities.js"></script>
+<script type="text/javascript" src="../Scripts/RunnuerInfo.js"></script>
 </head>
 
 <body>
@@ -144,7 +159,22 @@ div.navBar {
         <!-- the second column of information -->
         <span> Put runners information here </span>	
     </div>
-    
+    <div class="calculator">
+    	<p>How much would you like to donate?</p>
+        <div class="calcItem">
+        	<p>Base Donation<p>
+            <textarea onblur="UpdateDonation()" id="baseDonation" ></textarea>
+        </div>
+        <div class="calcItem">
+        	<p>Per Goal Mile met<p>
+            <textarea onblur="UpdateDonation()" id="perMile"></textarea>
+        </div>
+        <div class="totalBox">
+        	<hr /><p>Your Contribution</p>
+            <textarea readonly="readonly" id="donationTotal"></textarea>
+        </div>
+        
+    </div>
     <!-- end .content --></div>
   <div class="footer">
     <p>Footer</p>
