@@ -12,7 +12,7 @@
 <!--
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background: #4E5869;
+	background: #CCC;
 	margin: 0;
 	padding: 0;
 	color: #000;
@@ -56,7 +56,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 /* ~~the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo~~ */
 .header {
-	background: #6F7D94;
+	background: #0a0b76;
 }
 
 /* ~~ This is the layout information. ~~ 
@@ -66,6 +66,11 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 */
 .content {
 	padding: 10px 0;
+	border-style:solid;
+	border-width:1px;
+	padding: 5px;
+	margin: 5px;
+	box-shadow: 10px 10px 5px #888;
 }
 
 /* ~~ This grouped selector gives the lists in the .content area space ~~ */
@@ -95,8 +100,17 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	font-size: 1px;
 	line-height: 0px;
 }
+div.navBar {
+	background:#0a0b76;
+	height:auto;
+	width:100%;
+	
+	padding:5px;	
+}
 -->
-</style></head>
+</style>
+<script type="text/javascript" src="../Scripts/Common.js"/></script>
+</head>
 
 <body>
 
@@ -105,7 +119,8 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
     <!-- end .header --></div>
     
     <div class="navBar" id="navBarDiv">
-    	<button onclick="GoToAboutUs()"> About Us </button>
+    	<button onclick="GoToHome()"> Home </button>
+        <button onclick="GoToAboutUs()"> About Us </button>
         <button onclick="GoToRunners()"> Runners </button>
     </div>
     

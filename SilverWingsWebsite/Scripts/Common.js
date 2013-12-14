@@ -11,3 +11,7 @@ function GoToRunners() {
 function GoToHome() {
 	window.location.href="Home.html";	
 }
+
+function GoToTutorial() {
+	window.location.href="Tutorial.html";	
+}
