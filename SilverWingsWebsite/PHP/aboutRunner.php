@@ -35,7 +35,6 @@ $row = mysql_num_rows($result);
 
 mysql_close();
 
-echo('     end');
 ?>
 
 <html>

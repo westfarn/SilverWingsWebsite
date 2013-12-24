@@ -1,3 +1,35 @@
+<?PHP
+//start session
+session_start();
+
+//include information to connect to database with
+require_once 'ConnectDB.php';
+
+//Connect to MySQL Server
+$con = mysql_connect($host, $username, $password) or die('Failed to connect to server: ' . mysql_error());
+
+//Select database
+$db = mysql_select_db($database) or die("Unable to select database");
+
+//create query
+$qry = "SELECT * FROM runnerInfo";
+
+//All the data is saved in $result
+$result = mysql_query($qry);
+
+$index = 0;
+while($row = mysql_fetch_assoc($result)) 
+{
+	 $array[$index] = $row;
+	 $index++;	 
+}
+
+//This variable saves the number of rows (or arrays) in $array
+$row = mysql_num_rows($result);
+
+mysql_close();
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -168,44 +200,6 @@ div.navBar {
 	This the PHP scrupt to run before the page loads.
 	
 -->
-		<?PHP
-		//start session
-		session_start();
-
-		//include information to connect to database with
-		require_once 'ConnectDB.php';
-
-		//Connect to MySQL Server
-		$con = mysql_connect($host, $username, $password) or die('Failed to connect to server: ' . mysql_error());
-
-		//Select database
-		$db = mysql_select_db($database) or die("Unable to select database");
-
-		//create query
-		$qry = "SELECT * FROM runnerInfo";
-
-		//All the data is saved in $result
-		$result = mysql_query($qry);
-
-
-		$index = 0;
-		while($row = mysql_fetch_assoc($result)) 
-		{
-			 $array[$index] = $row;
-			 $index++;
-			 
-		}
-
-		//This variable saves the number of rows (or arrays) in $array
-		$row = mysql_num_rows($result);
-
-
-
-
-
-		mysql_close();
-
-		?>
 <div class="container">
 <div class="header"><a href="#"><img src="../Pictures/header.png" alt="Insert Logo Here" name="Insert_logo" width="100%" height="200" id="Insert_logo" style="background: #8090AB; display:block;" /></a> 
     <!-- end .header --></div>
