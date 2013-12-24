@@ -131,9 +131,39 @@ div.navBar {
 
 <script type="text/javascript" src="../Scripts/RunnerCapabilities.js"/></script>
 <script type="text/javascript" src="../Scripts/Common.js"/></script>
+<script type="text/javascript">
+	var data = <?PHP echo json_encode($array);?>;
+	var row = <?PHP echo $row;?>;
+	
+	function buildDiv(){
+		//data[0] is the first array
+		//data[1] is the second array
+		for(var i=0; i<row; i++){
+			var bibNumber = data[i].BibNumber;
+			var firstName = data[i].firstName;
+			var lastName = data[i].lastName;
+			var race = data[i].race;
+			var major = data[i].Major;
+			var org = data[i].Orginization;
+			var img = data[i].image;
+			var descript = data[i].Description;
+			
+			var string = "div" + i;
+			alert(string);
+			var divTag = document.createElement(string);
+			
+			//divTag.id = "div" + i;
+			divTag.setAttribute("class","div.runner_information");
+			divTag.innerHTML = "This HTML Div tag created using Javascript DOM dynamically.";
+			document.body.appendChild(divTag);
+			
+		}
+
+	}
+</script>
 </head>
 
-<body>
+<body onload="buildDiv()" >
 <!--
 	This the PHP scrupt to run before the page loads.
 	
